@@ -1,0 +1,4 @@
+protected_data_root: "../project-server-protected"
+raw_data_root: "../project-server-protected/raw"
+metadata_private_root: "../project-server-protected/metadata-private"
+outputs_private_root: "../project-server-protected/outputs-private"

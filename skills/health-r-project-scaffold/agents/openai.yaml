@@ -1,0 +1,4 @@
+interface:
+  display_name: "Health R Project Scaffold"
+  short_description: "Scaffold auditable R health projects"
+  default_prompt: "Use $health-r-project-scaffold to set up this folder as an auditable R health research project scaffold."

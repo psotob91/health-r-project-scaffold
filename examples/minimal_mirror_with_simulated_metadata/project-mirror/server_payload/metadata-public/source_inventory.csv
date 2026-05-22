@@ -1,0 +1,2 @@
+"source_id","source_path","source_role","data_status","sensitivity","confidence","notes"
+"S001","metadata-public/data_dictionary_template.csv","metadata_template","simulated_metadata_only","public_template","explicit","Template only; no raw data included."

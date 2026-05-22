@@ -1,0 +1,45 @@
+project_id: minimal_mirror_with_simulated_metadata
+project_name: Minimal Mirror With Simulated Metadata
+created_by_skill: health-r-project-scaffold
+validation_status: WARNING_PENDING_HUMAN_DECISION
+selected_decision_path:
+  environment: offline_with_online_mirror
+  storage_layout: code_data_split
+  structure_level: extended
+  data_status: simulated
+input_axes:
+  content:
+    empty_folder: false
+    data_present: false
+    metadata_dictionary_present: true
+    erd_schema_present: false
+    notes_protocol_present: false
+    codelists_mappings_initial_present: false
+    codelists_mappings_derived_present: false
+    codelists_mappings_present: false
+  package:
+    no_package_information: true
+    machine_universal_inventory_present: false
+    project_renv_subset_present: false
+    scope_unknown: false
+    complete_inventory_pending: true
+    renv_lock_present: false
+    package_policy_unknown: false
+  data_status:
+    simulated: true
+    real: false
+    unknown: false
+  environment:
+    online_with_agent: false
+    offline_no_mirror: false
+    offline_with_online_mirror: true
+server_payload_contract:
+  only_transfer_source: project-mirror/server_payload
+  future_production_scripts: project-mirror/server_payload/scripts
+  agent_artifacts_allowed_in_payload: false
+package_policy:
+  mode: offline_existing_binaries_only
+  inventory_scope: complete_inventory_pending
+data_policy:
+  current_inputs: simulated_metadata_only
+  id_date_zip_join_key_policy: sensitive_by_design_for_real_projects

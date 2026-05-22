@@ -1,0 +1,3 @@
+"question_id","topic","question","why_it_matters","allowed_decisions","status"
+"Q001","package_inventory","Attach the complete offline server or PC package inventory, or explicitly waive it.","Project renv should be planned against known local binaries in offline environments.","attach_complete_inventory|waive_inventory|unknown","open"
+"Q002","raw_data_location","Confirm where real raw data and private metadata will live on the protected server.","Prevents accidental transfer of protected data into the code payload.","code_data_split|single_protected_root|unknown","open"

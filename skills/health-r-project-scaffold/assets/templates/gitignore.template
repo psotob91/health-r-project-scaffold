@@ -1,0 +1,30 @@
+# Secrets and local config
+.env
+*.env
+*secret*
+*token*
+*credential*
+config/paths.local.yml
+README_private.md
+
+# Sensitive data and private outputs
+raw/
+external/
+metadata-private/
+derived/
+analytic/
+outputs-private/
+logs-private/
+data_real/
+data_sensitive/
+
+# R/session state
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/python/
+
+# OS
+.DS_Store
+Thumbs.db

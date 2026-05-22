@@ -1,0 +1,3 @@
+"table_name","field_name","description","role","sensitivity","status","notes"
+"example_table","member_id","Example member identifier field.","join_key","sensitive_by_design","template","Replace with project-specific metadata."
+"example_table","service_date","Example service date field.","date","sensitive_by_design","template","Dates should be reviewed for privacy and temporal meaning."

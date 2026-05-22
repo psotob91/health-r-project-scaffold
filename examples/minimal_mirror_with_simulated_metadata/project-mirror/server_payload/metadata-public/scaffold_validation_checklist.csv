@@ -1,0 +1,5 @@
+"check_id","check_name","status","evidence","required_human_action"
+"V001","server_payload_single_transfer_root","PASS","Only server_payload is marked for server code transfer.","no"
+"V002","agent_artifacts_outside_payload","PASS","Agent files are outside server_payload.","no"
+"V003","package_inventory_scope","WARNING","No machine-wide package inventory is included in this public example.","yes"
+"V004","overall_status","WARNING_PENDING_HUMAN_DECISION","Example is structurally valid but intentionally incomplete.","yes"

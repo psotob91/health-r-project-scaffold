@@ -1,0 +1,52 @@
+# Local OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets and private local config
+.env
+*.env
+*secret*
+*token*
+*credential*
+paths.local.yml
+README_private.md
+
+# Real or protected data
+raw/*
+data/*
+derived/*
+analytic/*
+intermediate/*
+outputs-private/*
+logs-private/*
+metadata-private/*
+!raw/.gitkeep
+!data/.gitkeep
+!derived/.gitkeep
+!analytic/.gitkeep
+!intermediate/.gitkeep
+!outputs-private/.gitkeep
+!logs-private/.gitkeep
+!metadata-private/.gitkeep
+!examples/**/.gitkeep
+**/raw_real/
+**/*real*/
+**/phi/
+
+# Machine-specific package inventories
+*installed_packages*
+*package_inventory*.csv
+*machine_package_inventory*.csv
+
+# Uploaded planning evidence
+pending_plan_intake/uploads/
+plan_requests/*/uploads/
+
+# R local state
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/python/

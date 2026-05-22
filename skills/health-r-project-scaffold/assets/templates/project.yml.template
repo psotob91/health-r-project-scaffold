@@ -1,0 +1,32 @@
+project_name: "<project_name>"
+project_id: "<project_id>"
+decision_path: "<online_agent | offline_no_mirror | offline_with_online_mirror>"
+structure: "<reduced | extended>"
+storage_layout: "<single_protected_root | code_data_split>"
+data_status: "<simulated | real | unknown>"
+input_axes:
+  content:
+    empty_folder: <true_or_false>
+    data_present: <true_or_false>
+    metadata_dictionary_present: <true_or_false>
+    erd_schema_present: <true_or_false>
+    notes_protocol_present: <true_or_false>
+    codelists_mappings_initial_present: <true_or_false>
+    codelists_mappings_derived_present: <true_or_false>
+    codelists_mappings_present: <true_or_false>
+  package:
+    no_package_information: <true_or_false>
+    machine_universal_inventory_present: <true_or_false>
+    project_renv_subset_present: <true_or_false>
+    scope_unknown: <true_or_false>
+    complete_inventory_pending: <true_or_false>
+    renv_lock_present: <true_or_false>
+    package_policy_unknown: <true_or_false>
+  data_status: "<simulated | real | unknown>"
+  environment: "<online_with_agent | offline_no_mirror | offline_with_online_mirror>"
+package_policy: "<online_installs_allowed | package_requests_only | offline_existing_binaries_only>"
+agent_enabled: <true_or_false>
+server_transfer_required: <true_or_false>
+server_payload_required: <true_or_false>
+server_payload_path: "<server_payload | not_applicable>"
+validation_status: "<OK_SO_FAR | WARNING_PENDING_HUMAN_DECISION | BLOCKED>"

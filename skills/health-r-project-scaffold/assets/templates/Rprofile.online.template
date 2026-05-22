@@ -1,0 +1,3 @@
+# Online project guardrails.
+Sys.setenv(HEALTH_R_PROJECT_MODE = "online_agent")
+message("Health R project scaffold: online/agent mode active. Follow package policy before installing packages.")

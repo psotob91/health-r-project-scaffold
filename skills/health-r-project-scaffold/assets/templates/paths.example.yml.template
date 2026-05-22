@@ -1,0 +1,8 @@
+project_root: "."
+metadata_root: "metadata"
+docs_root: "docs"
+simulated_data_root: "data_simulated"
+server_code_root: "<server_code_root>/<project_name>"
+server_protected_root: "<server_protected_root>/<project_name>"
+server_raw_root: "<server_protected_root>/<project_name>/raw"
+server_metadata_private_root: "<server_protected_root>/<project_name>/metadata-private"
