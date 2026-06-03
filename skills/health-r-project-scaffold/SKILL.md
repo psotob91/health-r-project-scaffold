@@ -119,6 +119,41 @@ In mirror/server workflows:
 - fail validation if server-bound scripts/docs/config are scattered outside `server_payload/`;
 - fail validation if `.codex/`, `.agents/`, `AGENTS.md`, `MEMORY.md` or `docs/agent_context/` appear inside `server_payload/`.
 
+## Online/Offline Mirror Policy
+
+For online laptop plus offline server projects, scaffold the laptop as a
+rehearsal of the server rather than a separate architecture:
+
+- `server_payload/` is the only code/docs/config root copied to the offline
+  server;
+- laptop paths should emulate server roots through explicit environment
+  variables, for example code on the project payload root and protected data
+  roots equivalent to server `D:` and `Z:`;
+- real raw data, harmonized outputs, derived data and QC outputs must stay in
+  protected data roots, not inside the code payload;
+- `AGENTS.md`, `MEMORY.md`, `.codex/`, `.agents/` and agent notes stay outside
+  the payload unless the user explicitly requests a server-side agent context;
+- generate both laptop-online and server-offline execution manuals with exact
+  folder setup, environment variables, bootstrap order, script order and review
+  artifacts;
+- record package policy, package inventory scope, `renv` strategy, internet
+  policy, D/Z-style root mapping and open/closed human decisions in config and
+  metadata.
+
+Recognized offline package policies:
+
+- `offline_locked_verify_only`: project code may verify an already prepared
+  project library, but must not hydrate or install packages.
+- `offline_global_cache_renv`: setup/bootstrap may populate a project `renv`
+  from approved global/site libraries and local `renv` cache, with no internet.
+- `offline_local_repo_renv`: setup/bootstrap may populate a project `renv` from
+  an approved local repository/cellar, with no internet.
+
+When `renv` is server-first, do not require a laptop `renv.lock` as an initial
+server input. Treat `renv.lock` as a bootstrap output created from the server's
+actual package versions, and document that `00_check_environment.R` or the
+analytic pipeline runs only after bootstrap evidence exists.
+
 ## Agent Context Rules
 
 Only create agent files in agent-enabled roots:

@@ -24,7 +24,16 @@ input_axes:
     package_policy_unknown: <true_or_false>
   data_status: "<simulated | real | unknown>"
   environment: "<online_with_agent | offline_no_mirror | offline_with_online_mirror>"
-package_policy: "<online_installs_allowed | package_requests_only | offline_existing_binaries_only>"
+package_policy: "<online_installs_allowed | package_requests_only | offline_existing_binaries_only | offline_locked_verify_only | offline_global_cache_renv | offline_local_repo_renv>"
+renv_bootstrap: "<not_applicable | setup_separate | restore_only | server_first_lockfile>"
+package_source: "<online_cran | package_requests_only | existing_project_library | global_site_libraries_plus_renv_cache | approved_local_repo_or_cellar>"
+internet_allowed: <true_or_false>
+server_root_mapping:
+  code_root: "<offline_code_root | not_applicable>"
+  raw_root: "<protected_raw_root | not_applicable>"
+  harmonized_root: "<protected_harmonized_root | not_applicable>"
+  derived_root: "<protected_derived_root | not_applicable>"
+  qc_root: "<protected_qc_root | not_applicable>"
 agent_enabled: <true_or_false>
 server_transfer_required: <true_or_false>
 server_payload_required: <true_or_false>

@@ -1,5 +1,5 @@
 # Offline project guardrails.
-Sys.setenv(HEALTH_R_PROJECT_MODE = "offline_locked")
+Sys.setenv(HEALTH_R_PROJECT_MODE = "offline_locked_verify_only")
 Sys.setenv(RENV_CONFIG_AUTOLOADER_ENABLED = "FALSE")
 Sys.setenv(RENV_CONFIG_SYNCHRONIZED_SNAPSHOT = "FALSE")
 Sys.setenv(RENV_CONFIG_RESTORE_PROMPT = "FALSE")
@@ -9,10 +9,10 @@ options(repos = c(CRAN = "file:///offline_cran_disabled"))
 .block_install <- function(name) {
   force(name)
   function(...) {
-    stop(name, " is disabled in offline_locked mode. Document a package request instead.", call. = FALSE)
+    stop(name, " is disabled in offline verify-only mode. Document a package request or use an approved setup-only renv bootstrap.", call. = FALSE)
   }
 }
 
 install.packages <- .block_install("install.packages")
 update.packages <- .block_install("update.packages")
-message("Health R project scaffold: offline_locked mode active.")
+message("Health R project scaffold: offline_locked_verify_only mode active.")
